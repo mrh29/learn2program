@@ -104,7 +104,7 @@ commit command rather than providing it separately.
 
 Now that you've committed the changes, you're ready to push them. Pushing refers to
 taking the commit you made locally, and adding it to the remote branches history.
-Run ```git push```. You should see logs indicating that you've pushed the changes
+Run ```git push origin [your_branch]```. You should see logs indicating that you've pushed the changes
 up to the remote branch. You can also check online to see that the changes are now
 reflected there.
 
@@ -126,7 +126,7 @@ on the remote repository since the last fetch.
 Now you're ready to merge in the changes from your branch. Run the command
 ```git merge origin/[branch_name]``` where branch_name is the branch you
 made in the Making Changes section. You should see logs indicating
-that favorites.txt has changed. Go ahead and run ```git push``` to update
+that favorites.txt has changed. Go ahead and run ```git push origin git-todo``` to update
 git-todo on the remote repository. You should now have all the tools
 you need to start programming! Feel free to read about conflicts if you
 want to know what happens when changes are made on your branch and the
