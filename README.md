@@ -27,6 +27,13 @@ The git-todo branch teaches basic profiency in git.
 This branch will feature more of an introduction to basic computer science topics
 and how programming works.
 
+## Getting Started
+
+I would recommend getting started with the git-todo branch which will
+help explain how to navigate and use this repository. To navigate to that
+branch in a web browser, click the dropdown that currently reads main (below
+the menu bar) and select the git-todo branch.
+
 ## Feedback
 
 Please provide any feedback! I would love to hear what works and what does not.
