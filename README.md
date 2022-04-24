@@ -10,6 +10,11 @@ the Terminal application. For Windows, you'll want to be using PowerShell (or an
 
 ## Local vs. Remote
 
+Git documents often differentiate between a local repo and a remote repo. A local repo
+is one that is one your machine. Local changes are ones that you have made locally but have not
+been added to the remote repo. This means that no one can access your changes except your machine.
+Pushing to the remote repository ensures that everyone can see and access your changes.
+
 ## Getting Code (Initially)
 
 To start out, you will need to ```fork``` and ```clone``` this repository. Forking
@@ -126,7 +131,7 @@ on the remote repository since the last fetch.
 Now you're ready to merge in the changes from your branch. Run the command
 ```git merge origin/[branch_name]``` where branch_name is the branch you
 made in the Making Changes section. You should see logs indicating
-that favorites.txt has changed. Go ahead and run ```git push origin git-todo``` to update
+that favorites.txt has changed. Go ahead and run ```git push origin git-todo ``` to update
 git-todo on the remote repository. You should now have all the tools
 you need to start programming! Feel free to read about conflicts if you
 want to know what happens when changes are made on your branch and the
@@ -165,3 +170,11 @@ on the branch you're attempting to merge from. To resolve the conflict,
 remove the HEAD, =, and >>>>> [your_branch] lines and fix the numbering
 of the items to fix the list. Then add, commit, and push your changes.
 Congratulations, you've resolved the conflict!
+
+## Solution
+
+If you'd like to see an example of this tutorial, you can look at the
+history of the git-soln branch. It's history is as follows: it first
+merges from the branch "branch_to_merge", then it pushes a new
+commit, and finally merges from branch_to_merge again
+which resulted in a merge conflict.
