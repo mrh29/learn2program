@@ -1,38 +1,48 @@
 # learn2program
 
-## Intro
+## Programming in X
 
-This repository serves as a simple introduction to programming. Recently I have had friends
-talk about learning to program but not knowing where to start, so I thought I would try my
-hand at a short introduction. I am in no way an expert on Computer Science education, but
-I have worked with people learning how to code for the first time.
+This repository serves as a simple introduction to programming in X.
 
-## Organization
+## Overview of X
 
-This repo is organized into various branches. 
+X is a programming language.
 
-### Programming
+## Strengths of X
 
-X-todo and X-soln are branches with problems to solve in the language X. The initial languages will be
-C, OCaml, and Python. C because it's widely used and important for understanding how computers
-work at a lower level, Python because it's one of the easiest languages to get started with,
-and OCaml to showcase a functional language.
+X is cool because it can do foo.
 
-### Git
+## Weaknesses of X
 
-The git-todo branch teaches basic profiency in git.
+X is not cool because it cannot do bar.
 
-### Copmuter Science and Programming
+## Running Programs in X
 
-This branch will feature more of an introduction to basic computer science topics
-and how programming works.
+To run your program in X, do the following:
 
-## Getting Started
+## Problem 1
 
-I would recommend getting started with the git-todo branch which will
-help explain how to navigate and use this repository. To navigate to that
-branch in a web browser, click the dropdown that currently reads main (below
-the menu bar) and select the git-todo branch.
+Thie first problem is to modify a string by adding your name.
+In the directory prob1, you should see a file named hello.X.
+It currently prints "Hello, world." Your first task is to
+add your name after, so that the program prints
+"Hello, world. My name is Y."
+
+## Problem 2
+
+The second problem is to modify a file to do Y.
+
+## Problem 3
+
+The third problem is to modify a file to do Y.
+
+## Problem 4
+
+The fourth problem is to modify a file to do Y.
+
+## Problem 5
+
+The final problem is to write a file from scratch that does Y
 
 ## Feedback
 
