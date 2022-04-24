@@ -158,8 +158,10 @@ You should get this message: "CONFLICT (content): Merge conflict in favorites.tx
 Open up favorites.txt. You should see weird lines:
 
 <<<<<<< HEAD
-=======
->>>>>>> [your_branch]
+
+\=\=\=\=\=\=\=
+
+\>\>\>\>\>\>\> [your_branch]
 
 
 The HEAD line indicates what the changes on the current branch are.
