@@ -13,12 +13,14 @@ at runtime. When working in a large codebase, typing can help you catch mistakes
 ### On Conditionals
 Below the print statements (lines with print), you'll notice a few blocks that start with if followed by a condition. This is your first exposure to a conditional statement. These are statements that are only run when certain conditions are met.
 
+```
 if foo:
     print('1')
 elif bar:
     print('2')
 else:
     print('3')
+```
 
 In this example, if the condition foo is met we will print 1, if bar (but not foo) is met, we will print 2, and in all other cases we will print 3. If foo is a number (type int), the statement in the block will be evaluated if it is non-zero. ```elif``` is a shortening of ```else if``` specific to python. Because else if statements are
 so common in programming this shortening helps save typing.
