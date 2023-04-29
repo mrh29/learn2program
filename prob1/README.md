@@ -13,9 +13,12 @@ should print the above text.
 
 ### Strings and Numbers
 In programming, a string is a sequence of characters (or chars) that represent text to the
-program. In X, they are started and ended with [character]. The other type
+program. In C, they are started and ended with a quotation mark ("). However,
+C also has the character (or ```char```) type which is started and ended with
+the single quotation (') and is separate from string (or ```char*```) type.
+This means that in C, "C" and 'C' are different types. The other type
 in this problem is a number or integer. This type represents a number which
-can be used for a number of things from arithmetic to counters.
+has multiple uses from arithmetic to counters.
 
 ### More on Types
 You may be wondering what the benefit of types are. Types allow programmers to
@@ -44,9 +47,7 @@ if (foo) {
 In this example, if the condition foo is met we will print 1, if
 bar (but not foo) is met, we will print 2, and in all other cases
 we will print 3. 
-If foo is a number, the statement in the block will be evaluated if it is non-zero.
-However, we can
-
+If foo is a number (type ```int```), the statement in the block will be evaluated if it is non-zero.
 
 
 In hello.c, a different statement is printed based on the

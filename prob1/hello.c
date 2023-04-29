@@ -3,7 +3,7 @@
 int main(int argc, char* arg[]) {
 
     char* name = "Alan";
-    int age = -1;
+    int age = 42;
 
     printf("Hello, world. My name is %s, and I am %u\n", name, age);
 
