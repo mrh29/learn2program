@@ -51,7 +51,7 @@ to include your name and age.
 
 ## Problem 2
 
-The second problem is to modify a file to do validate a password. The
+The second problem is to modify a file to validate a password. The
 goal is to validate that a password meets certain requirements
 (e.g. containing 5 numbers and 1 uppercase letter). You will also
 learn about unit testing.
