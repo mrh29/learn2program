@@ -1,16 +1,16 @@
-Problem 1
+# Problem 1
 In this directory, you should see a file named hello. It currently prints "Hello, world. My name is Alice, and I am 42." and a message about the age of Alice. Your first task is to edit the program, so that it prints your name and age: "Hello, world. My name is Y, and I am Z." To do this you need to modify two things: the string 'Alice' and the number 42.
 
 When completed, your file hello should print the above text when run.
 
-Strings and Numbers
+### Strings and Numbers
 In programming, a string is a sequence of characters (or chars) that represent text to the program. In Python, they are started and ended with a single or double quotation mark (' or "). We use single quotation mark throughout this problem for consistency. The other type in this problem is a number or integer. This type represents a number which has multiple uses from arithmetic to counters.
 
-More on Types
+### More on Types
 You may be wondering what the benefit of types are. Types allow programmers to catch errors that could have derailed the program. Consider the basic example 2 + "Hello". Some languages will be able to detect a type error like this and inform the programmer before having to run the program. Python will only detect this type of error
 at runtime. When working in a large codebase, typing can help you catch mistakes before they've been run.
 
-On Conditionals
+### On Conditionals
 Below the print statements (lines with print), you'll notice a few blocks that start with if followed by a condition. This is your first exposure to a conditional statement. These are statements that are only run when certain conditions are met.
 
 if foo:
