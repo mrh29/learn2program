@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+
+REQUIRED_UPPER_CASE = 1
+REQUIRED_SPECIAL    = 1
+REQUIRED_NUMBER     = 1
+
+
+SPECIALS            = ['!', '@', '#', '$', '%', '&']
+
+NUM_TESTS           = 9
+
+def is_upper(c):
+    return (ord(c) >= ord('A')) and (ord(c) <= ord('Z'))
+
+def is_lower(c):
+    return (ord(c) >= ord('a')) and (ord(c) <= ord('z'))
+
+def is_special(c):
+    return c in SPECIALS
+
+def is_number(c):
+    return (ord(c) >= ord('0')) and (ord(c) <= ord('9'))
+
+class PasswordTest:
+    def __init__(self, password, result):
+        self.password   = password
+        self.result     = result
+
+password_tests = [PasswordTest('IMeet3Requirements!', True), 
+                    # only numbers
+                    PasswordTest('12345678', False), 
+                    # only lowercase
+                    PasswordTest('abcdefghi', False),
+                    # only uppercase
+                    PasswordTest('ABCDEFG', False),
+                    # only special
+                    PasswordTest('!@#$%&', False),
+                    # no special
+                    PasswordTest('abcDEFG123', False),
+                    # no number
+                    PasswordTest('abcDEF', False),
+                    # no uppercase
+                    PasswordTest('abc123', False),
+                    # unsupported character
+                    PasswordTest('abcDEF123$%)', False)]
+
+def validate_password(password):
+    
+    upper_count   = 0
+    number_count  = 0
+    special_count = 0
+
+    for c in password:
+        if (is_upper(c)):
+            # += is a special operator that is equivalent to upper_count = upper_count + 1
+            upper_count += 1
+        elif (is_special(c)):
+            special_count += 1
+        elif (is_number(c)):
+            number_count += 1
+        elif (not is_lower(c)):
+            print('Unsupported character!')
+            return False
+    
+    return upper_count >= REQUIRED_UPPER_CASE and number_count >= REQUIRED_NUMBER and special_count >= REQUIRED_SPECIAL
+
+for test in password_tests:
+    assert(validate_password(test.password) == test.result)
