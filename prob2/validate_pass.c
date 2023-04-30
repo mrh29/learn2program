@@ -76,6 +76,7 @@ uint8_t validate_password(const char* password, uint8_t length) {
             break;
         }
         if (is_upper(password[i])) {
+            // ++ is a special operator that is equivalent to upper_count = upper_count + 1;
             upper_count++;
         } else if (is_lower(password[i])) {
             // no-op
@@ -91,13 +92,9 @@ uint8_t validate_password(const char* password, uint8_t length) {
     }
 
     // Check that our counts meet the requirements
-    if (special_count >= REQUIRED_SPECIAL &&
+    return special_count >= REQUIRED_SPECIAL &&
             upper_count >= REQUIRED_UPPER_CASE &&
-            number_count >= REQUIRED_NUMBERS) {
-        return 1;
-    } else {
-        return 0;
-    }
+            number_count >= REQUIRED_NUMBERS;
 }
 
 int main(int argc, char* argv[]) {

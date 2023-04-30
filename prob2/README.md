@@ -34,6 +34,18 @@ what is being checked in each conditional. While not demonstrated in this exampl
 functions are also helpful if you want to reuse code multiple times without having
 to rewrite or copy-paste the code every time you use it.
 
+In C, the syntax for declaring a function is the following:
+
+```type function_name(type1 arg1, type2 arg2, type3 arg3) {}```.
+
+```type``` is the return type of the function. This can be any C type previously
+declared or ```void``` which indicates the function does not return a value. ```function_name```
+is the name used to call a function later on in the code. ```type1 arg1``` is the the type
+and name of the various arguments. An argument is passed (or given) to the function to
+be used in the function code. They can be of any type and you can have any number
+of arguments to a function. You can also have functions that take no arguments: ```int f(void)```
+is a function that takes no arguments and returns an int.
+
 ### Arrays
 We introduce the new array type in this problem. Arrays are a list or grouping of
 a particular type.
@@ -41,8 +53,11 @@ Arrays are declared (or created) with the following syntax:
 ```type array_name[size];```. ```type``` is the type of each
 element of the array. It is any previously declared C type. ```array_name``` is the
 name by which you will reference the array. It can be any valid C identifier. ```size```
-is how many elements will be in the array. If you declare an array like this,
+is how many elements will be in the array.
+If you declare an array like this,
 it will have garbage values in it, so make sure to set the values before using them!
+In C, arrays have a fixed size, so it
+is not possible to make the array longer or shorter after you have declared it.
 
 The declaration of one array is at line 14 of the program:
 ```char special[NUM_SPECIAL] = {'!', '@', '#', '$', '%', '&'};```. This is the initializer
@@ -50,6 +65,15 @@ list method of creating an array in C. In it, you tell the compiler how long the
 is and with what values it should start. This avoids the problem of having garbage in
 your array when it is initialized. This is an array named ```special```
 of size ```NUM_SPECIAL``` which contains ```char``` elements.
+
+To access the element of an array, you use an index. In most languages,
+indexes start at 0, so ```speical[0]``` is the character ```!``` and
+so on for the rest of the indices. An out-of-bounds index is one that
+is larger than the size of the array. For example,
+```special[NUM_SPECAL]``` is an out-of-bounds access. In C, these
+can be especially dangerous because the code can compile (often with warnings),
+but will still run. In the worst case, an error like this could be exploited
+by a threat actor and cause security issues or data breaches.
 
 ### Boolean Logic
 Boolean logic is used throughout programming. It is used for deciding if something
@@ -92,6 +116,10 @@ of the loop. In this problem, we will iterate until ```i == NUM_TESTS``` at whic
 will exit the loop. This means that we will iterate ```NUM_TESTS``` times. On each iteration
 of the loop, we check a different password_test in the ```password_tests``` array. You will
 need to add a loop to implement the ```is_special``` function.
+
+while loops iterate until a certain condition is no longer true. The syntax is
+```while (condition)```. This loop will iterate until the Boolean expression condition
+evaluates to false.
 
 ### Unit Tests
 Unit tests are a standard way of validating that the code you have written is correct.
