@@ -2,11 +2,17 @@
 
 int main(int argc, char* arg[]) {
 
+    // User's name and age
     char* name = "Alan";
     int age = 42;
 
+    // print the name and age
     printf("Hello, world. My name is %s, and I am %u\n", name, age);
 
+/* Multi-line comment
+ *  This comment spans multiple
+ *  lines and continues
+ *  until it is closed */
     if (age < 12) {
         printf("You're a child\n");
     } else if (age < 20) {

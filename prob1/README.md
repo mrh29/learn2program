@@ -53,3 +53,8 @@ If foo is a number (type ```int```), the statement in the block will be evaluate
 In hello.c, a different statement is printed based on the
 age that you set before compiling your program. Try and change the age
 to print each statement!
+
+### Comments
+One important part of programming is adding documentation in the form of comments in your code. Comments are notes that do not impact how your code is run, but make it easier for a human to read and understand what the code is doing. In C, there are two ways to add comments. Single line comments are
+started with ```//``` and capture the rest of the line. Multi-line comments are started with ```/*``` and ended with ```*/```. Anything between the two
+is a comment. So you can have the comment ```// Single line``` or ```/* Multi-line */```. Try adding a comment to your code and verify it does not change how your program runs.

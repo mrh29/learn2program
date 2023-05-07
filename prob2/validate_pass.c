@@ -13,14 +13,18 @@
 // Global array of supported special chars
 char special[NUM_SPECIAL] = {'!', '@', '#', '$', '%', '&'};
 
+// returns true if c is uppercase
 uint8_t is_upper(char c) {
     return (c >= 'A') && (c <= 'Z');
 }
 
+// returns true if c is lowercase
 uint8_t is_lower(char c) {
     return (c >= 'a') && (c <= 'z');
 }
 
+/* returns true if c is in the list of 
+ *   special characters */
 uint8_t is_special(char c) {
     // Iterate over special char array
     for (int i = 0; i < NUM_SPECIAL; i++) {
@@ -31,6 +35,7 @@ uint8_t is_special(char c) {
     return 0;
 }
 
+// returns true if c is a number
 uint8_t is_number(char c) {
     return (c >= '0') && (c <= '9');
 }
@@ -38,12 +43,14 @@ uint8_t is_number(char c) {
 
 #define NUM_TESTS (9)
 
+// custom password test type
 typedef struct password_test_t {
     const char* password;
     uint8_t length;
     uint8_t result;
 } password_test_t;
 
+// array of password tests
 static password_test_t password_tests[NUM_TESTS] = {{"IMeet3Requirements!", 21, 1},
                                                         // only numbers
                                                         {"12345678", 9, 0},
@@ -63,6 +70,7 @@ static password_test_t password_tests[NUM_TESTS] = {{"IMeet3Requirements!", 21, 
                                                         {"abcDEF123$\%)", 13, 0}};
 
 
+// validates the password argument against password requirement macros
 uint8_t validate_password(const char* password, uint8_t length) {
 
     uint8_t upper_count = 0;
