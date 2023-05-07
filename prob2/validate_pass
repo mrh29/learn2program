@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+
+REQUIRED_UPPER_CASE = 1
+REQUIRED_SPECIAL    = 1
+REQUIRED_NUMBER     = 1
+
+
+SPECIALS            = ['!', '@', '#', '$', '%', '&']
+
+# returns True if c is uppercase
+def is_upper(c):
+    return ('A' < c) and (c <= 'Z')
+
+# returns True if c is lowercase
+def is_lower(c):
+    # TODO: Check if c is lower case
+    return False
+
+# returns True if c is a special character
+def is_special(c):
+    """TODO: iterate over SPECIALS to check if 
+        c is a special character"""
+    return False
+
+# returns True if c is a number
+def is_number(c):
+    # TODO: Check if c is a number
+    return False
+
+# class for password tests
+class PasswordTest:
+    def __init__(self, password, result):
+        self.password   = password
+        self.result     = result
+
+# list of tests
+password_tests = [PasswordTest('IMeet3Requirements!', True), 
+                    # only numbers
+                    PasswordTest('12345678', False)]
+
+"""validate_password:
+        this function validates
+        the password argument
+        against requirements for
+        a password"""
+def validate_password(password):
+    
+    upper_count   = 0
+    number_count  = 0
+    special_count = 0
+
+    for c in password:
+        if (is_upper(c)):
+            # += is a special operator that is equivalent to upper_count = upper_count + 1
+            upper_count += 1
+        elif (is_special(c)):
+            special_count += 1
+        elif (is_number(c)):
+            number_count += 1
+        elif (not is_lower(c)):
+            print('Unsupported character!')
+            return False
+        
+    # TODO: check the other requirements
+    return upper_count >= REQUIRED_UPPER_CASE
+
+# unit tests
+for test in password_tests:
+    assert(validate_password(test.password) == test.result)

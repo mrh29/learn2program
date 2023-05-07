@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+# user's name and age
+name = 'Alice'
+age  = 42
+
+# print the name and age
+print('Hello, world. My name is {}, and I am {}'.format(name, age))
+
+"""This is an example of
+   a multi-line comment
+   in Python"""
+
+if age < 12:
+    print('You are a child')
+elif age < 20:
+    print('You are a teen')
+elif age < 30:
+    print('You are in your twenties')
+elif age == 100:
+    print('You are a century old')
+else:
+    print('You are older than 30')
