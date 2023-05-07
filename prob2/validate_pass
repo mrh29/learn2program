@@ -9,23 +9,29 @@ SPECIALS            = ['!', '@', '#', '$', '%', '&']
 
 NUM_TESTS           = 9
 
+# returns True if c is uppercase
 def is_upper(c):
     return (ord(c) >= ord('A')) and (ord(c) <= ord('Z'))
 
+# returns True if c is lowercase
 def is_lower(c):
     return (ord(c) >= ord('a')) and (ord(c) <= ord('z'))
 
+# returns True if c is a special character
 def is_special(c):
     return c in SPECIALS
 
+# returns True if c is a number
 def is_number(c):
     return (ord(c) >= ord('0')) and (ord(c) <= ord('9'))
 
+# class for password tests
 class PasswordTest:
     def __init__(self, password, result):
         self.password   = password
         self.result     = result
 
+# list of tests
 password_tests = [PasswordTest('IMeet3Requirements!', True), 
                     # only numbers
                     PasswordTest('12345678', False), 
@@ -44,6 +50,11 @@ password_tests = [PasswordTest('IMeet3Requirements!', True),
                     # unsupported character
                     PasswordTest('abcDEF123$%)', False)]
 
+"""validate_password:
+        this function validates
+        the password argument
+        against requirements for
+        a password"""
 def validate_password(password):
     
     upper_count   = 0
@@ -64,5 +75,6 @@ def validate_password(password):
     
     return upper_count >= REQUIRED_UPPER_CASE and number_count >= REQUIRED_NUMBER and special_count >= REQUIRED_SPECIAL
 
+# unit tests
 for test in password_tests:
     assert(validate_password(test.password) == test.result)
