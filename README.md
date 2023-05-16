@@ -1,30 +1,30 @@
 # learn2program
 
-## Programming in X
+## Programming in OCaml
 
-This repository serves as a simple introduction to programming in X.
+This repository serves as a simple introduction to programming in OCaml.
 
-## Overview of X
+## Overview of OCaml
 
-X is a programming language.
+OCaml is a statically typed, functional programming language.
 
-## Strengths of X
+## Strengths of OCaml
 
-X is cool because it can do foo.
+OCaml is cool because it can do foo.
 
-## Weaknesses of X
+## Weaknesses of Ocaml
 
-X is not cool because it cannot do bar.
+OCaml is not cool because it cannot do bar.
 
-## Running Programs in X
+## Running Programs in OCaml
 
-To run your program in X, do the following:
+To run your program in OCaml, do the following:
 
 ## Problem 1
 
 Thie first problem is to modify a program by editing it
 to include your name and age.
-In the directory prob1, you should see a file named hello.X.
+In the directory prob1, you should see a file named hello.ml.
 It currently prints "Hello, world. My name is Alice, and I am 42."
 Your first task is to edit the program, so that it prints
 your name and age:
